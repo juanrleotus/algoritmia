@@ -1,0 +1,342 @@
+        /* letras */
+        
+        @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;0,900;1,100&display=swap");
+        /* variables */
+        
+         :root {
+            --color-uno: #f4f9f9;
+            --color-dos: #ce5712;
+            --color-tres: #c4681d;
+            --color-cuatro: #0a0707d8;
+            --font: "lato", sans-serif;
+            scroll-behavior: smooth;
+            overflow-y: scroll;
+        }
+        /* reseteo navegador */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font);
+            font-size: 62.5%;
+            /* scroll-behavior: smooth; */
+        }
+        /* contenedor general */
+        
+        .container {
+            width: 80vw;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: 100px 500px 1fr 150px;
+        }
+        /* barra de navegacion */
+        
+        nav {
+            background-color: var(--color-tres);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: sticky;
+            top: -20px;
+            z-index: 5;
+            border-bottom: 3px solid var(--color-uno);
+        }
+        
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            color: var(--color-uno);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        nav ul li a {
+            font-size: 1.6rem;
+            color: var(--color-uno);
+            font-weight: 700;
+            text-decoration: none;
+            margin: 10px;
+        }
+        
+        nav a:hover,
+        nav li:hover {
+            color: var(--color-cuatro);
+            transform: translateY(-5px);
+            transition: translateY .2s;
+        }
+        
+        .foto-logo img {
+            width: 100px;
+            height: 80px;
+            transition: transform .5s;
+        }
+        
+        .foto-logo img:hover {
+            transform: scale(1.2);
+            transition: transform .2s;
+        }
+        
+        button {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 0 8px var(--color-cuatro);
+            background-color: var(--color-uno);
+            width: 90px;
+            height: 30px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--color-cuatro);
+            cursor: pointer;
+            transition: transform .5s;
+        }
+        
+        button:hover {
+            transform: scale(1.2);
+            transition: transform .2s;
+        }
+        
+        button:active {
+            background-color: var(--color-dos);
+            outline: 3px solid var(--color-uno);
+            color: var(--color-uno)
+        }
+        /* encabezado */
+        
+        header {
+            position: relative;
+        }
+        
+        .fondo-header {
+            width: 80vw;
+            height: 500px;
+            background-position: -8%;
+            object-fit: cover;
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-image: url(../images/banner.jfif);
+        }
+        
+        header .foto-perfil {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            top: 80%;
+            left: 10%;
+            border: 3px solid var(--color-uno);
+            box-shadow: 0 0 12px var(--color-cuatro);
+            transition: transform .5s;
+        }
+        
+        .foto-perfil:hover {
+            transition: transform .2s;
+            cursor: pointer;
+            transform: scale(1.2)
+        }
+        
+        main {
+            background-color: var(--color-uno);
+            display: flex;
+            border-top: 3px solid var(--color-uno);
+            padding-bottom: 50px;
+        }
+        
+        .nombre {
+            width: 50vw;
+            margin-top: 150px;
+            margin-left: 3%;
+            position: relative;
+        }
+        
+        .nombre article {
+            position: sticky;
+            top: 210px;
+        }
+        
+        .nombre h2 {
+            font-size: 5.4rem;
+            color: var(--color-tres);
+            font-weight: 900;
+            text-shadow: 2px 2px var(--color-cuatro);
+            padding-right: 12px;
+        }
+        
+        .nombre h3 {
+            font-size: 4rem;
+            color: var(--color-cuatro);
+            font-weight: 700;
+        }
+        
+        .acerca-de {
+            margin-top: 160px;
+            margin-right: 6vw;
+            margin-left: 20px;
+        }
+        
+        .acerca-de h2 {
+            font-size: 2rem;
+            color: var(--color-tres)
+        }
+        
+        .acerca-de p {
+            margin-top: 20px;
+            font-size: 1.6rem;
+            color: var(--color-cuatro);
+        }
+        
+        .experiencia {
+            margin-top: 50px;
+            margin-right: 6vw;
+            margin-left: 20px;
+        }
+        
+        .experiencia h2 {
+            font-size: 2rem;
+            color: var(--color-tres)
+        }
+        
+        .experiencia h3 {
+            font-size: 2rem;
+            color: var(--color-cuatro);
+            margin-top: 20px;
+        }
+        
+        .experiencia p {
+            margin-top: 20px;
+            font-size: 1.6rem;
+            color: var(--color-cuatro);
+        }
+        
+        .formacion {
+            margin-top: 50px;
+            margin-right: 6vw;
+            margin-left: 20px;
+        }
+        
+        .formacion h2 {
+            font-size: 2rem;
+            color: var(--color-tres);
+        }
+        
+        .formacion h3 {
+            font-size: 2rem;
+            color: var(--color-cuatro);
+        }
+        
+        .formacion p {
+            margin-top: 20px;
+            font-size: 1.6rem;
+            color: var(--color-cuatro);
+        }
+        
+        .proyectos {
+            margin-top: 50px;
+            margin-right: 6vw;
+            margin-left: 20px;
+        }
+        
+        .proyectos h2 {
+            font-size: 2rem;
+            color: var(--color-tres)
+        }
+        
+        .proyectos p {
+            margin-top: 20px;
+            font-size: 1.6rem;
+            color: var(--color-cuatro);
+        }
+        
+        .skill {
+            margin-top: 50px;
+            margin-right: 6vw;
+            margin-left: 20px;
+        }
+        
+        .skill h2 {
+            font-size: 2rem;
+            color: var(--color-tres)
+        }
+        
+        .skill p {
+            margin-top: 20px;
+            font-size: 1.6rem;
+            color: var(--color-cuatro);
+        }
+        
+        footer {
+            background-color: var(--color-cuatro);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 3px solid var(--color-uno);
+        }
+        
+        footer a {
+            text-decoration: none;
+            padding: 55px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--color-uno);
+            transition: transform translate .5s;
+        }
+        
+        footer a:hover {
+            color: var(--color-tres);
+            font-weight: 900;
+            transform: scale(1.2);
+            transform: translateY(-5px);
+            transition: transform .2s;
+            transition: translateY .2s;
+        }
+        .footer_bottom{
+          float:left; 
+          display:inline; 
+          width:100%; 
+          padding:10px 30px; 
+          background-color:#303030; 
+          color:#ccc
+        }
+        .copyright{
+          float:center; 
+          width:50%; 
+          padding-top:5px; 
+          font-size: 1.6rem;
+          text-align:center
+        }
+        .copyright a{
+          color:#ccc
+        }
+        .developer{
+          float:center; 
+          width:50%; 
+          font-size: 1.6rem;
+          text-align:right; 
+          padding-top:5px; 
+          color:#ccc
+        }
+        .developer a{
+          color:#ccc
+        }
+        .social {
+            position:relative;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            top: 20%;
+            left: 10%;
+            border: 3px solid var(--color-uno);
+            box-shadow: 0 0 12px var(--color-cuatro);
+            transition: transform .5s;
+        }
+        .social:hover {
+            transition: transform .2s;
+            cursor: pointer;
+            transform: scale(1.3)
+        }
